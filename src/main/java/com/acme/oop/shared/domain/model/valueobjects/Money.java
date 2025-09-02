@@ -18,6 +18,7 @@ public record Money(BigDecimal amount, Currency currency) {
             throw new IllegalArgumentException("Currency cannot be null");
         if (amount.scale() > currency().getDefaultFractionDigits())
             throw new IllegalArgumentException("Amount scale cannot be greater than currency fraction digits");
+
     }
 
     /**
